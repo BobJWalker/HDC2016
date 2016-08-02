@@ -33,11 +33,6 @@ namespace CodeAperture.IO.HDC2016.Controllers.api
             }
         }
 
-        /// <summary>
-        /// A credit bureau history for the customer being sent in.
-        /// </summary>
-        /// <param name="customerId">The customerId to get the credit bureau history for</param>        
-        /// <returns></returns>
         [Route("api/LocalScopeGetItems/{itemId}")]
         [HttpGet]
         public IActionResult GetItemById(int itemId)
