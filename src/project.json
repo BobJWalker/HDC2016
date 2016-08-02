@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0-*",
+  "name": "HDC2016",
+  "description": "Sample Application for HDC 2016",
+  "buildOptions": {
+    "debugType": "portable",
+    "emitEntryPoint": true
+  },
+  "dependencies": {
+    "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.0.0"
+  },
+  "frameworks": {
+    "netcoreapp1.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.0.0"
+        },
+        "Microsoft.AspNetCore.Server.Kestrel": "1.0.0"
+      },
+      "imports": "dnxcore50"
+    }
+  }
+}
