@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using CodeAperture.HDC2016.SampleSite.Filters;
 
 namespace CodeAperture.HDC2016.SampleSite
 {
@@ -14,6 +15,9 @@ namespace CodeAperture.HDC2016.SampleSite
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //Configure Global Filters
+            GlobalConfiguration.Configuration.Filters.Add(new ExceptionFilterAttribute());
         }
     }
 }

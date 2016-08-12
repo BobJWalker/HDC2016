@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using CodeAperture.HDC2016.SampleSite.Filters;
 
 namespace CodeAperture.HDC2016.SampleSite
 {
@@ -6,7 +7,7 @@ namespace CodeAperture.HDC2016.SampleSite
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            filters.Add(new HandleErrorAttribute());            
         }
     }
 }
