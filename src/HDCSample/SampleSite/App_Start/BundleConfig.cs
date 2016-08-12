@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
-namespace SampleSite
+namespace CodeAperture.HDC2016.SampleSite
 {
     public class BundleConfig
     {

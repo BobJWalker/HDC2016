@@ -1,8 +1,9 @@
-﻿using Microsoft.Owin;
+﻿using CodeAperture.HDC2016.SampleSite;
+using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(SampleSite.Startup))]
-namespace SampleSite
+[assembly: OwinStartup(typeof(Startup))]
+namespace CodeAperture.HDC2016.SampleSite
 {
     public partial class Startup
     {

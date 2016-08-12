@@ -1,13 +1,12 @@
 ﻿using System;
+using CodeAperture.HDC2016.SampleSite.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.Google;
 using Owin;
-using SampleSite.Models;
 
-namespace SampleSite
+namespace CodeAperture.HDC2016.SampleSite
 {
     public partial class Startup
     {

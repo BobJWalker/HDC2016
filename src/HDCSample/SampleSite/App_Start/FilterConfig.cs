@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
-namespace SampleSite
+namespace CodeAperture.HDC2016.SampleSite
 {
     public class FilterConfig
     {

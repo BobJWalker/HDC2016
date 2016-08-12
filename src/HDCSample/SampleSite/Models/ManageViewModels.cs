@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
-namespace SampleSite.Models
+namespace CodeAperture.HDC2016.SampleSite.Models
 {
     public class IndexViewModel
     {

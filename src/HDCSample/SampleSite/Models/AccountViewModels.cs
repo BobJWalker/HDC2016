@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace SampleSite.Models
+namespace CodeAperture.HDC2016.SampleSite.Models
 {
     public class ExternalLoginConfirmationViewModel
     {

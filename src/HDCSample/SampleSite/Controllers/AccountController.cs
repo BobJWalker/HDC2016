@@ -1,16 +1,13 @@
-﻿using System;
-using System.Globalization;
-using System.Linq;
-using System.Security.Claims;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using CodeAperture.HDC2016.SampleSite.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using SampleSite.Models;
 
-namespace SampleSite.Controllers
+namespace CodeAperture.HDC2016.SampleSite.Controllers
 {
     [Authorize]
     public class AccountController : Controller
