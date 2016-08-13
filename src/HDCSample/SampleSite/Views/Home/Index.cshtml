@@ -10,18 +10,25 @@
 
 <div class="row">
     <div class="col-md-4">
+        <h2>Content Security Policy</h2>
+        <p>Content security policy allows you to only allow certain sources (JavaScript, Images, etc) to load. It is a good first line of defense against XSS</p>
+        <p>@Html.ActionLink("Learn More", "ContentSecurityPolicy", "ConfigurationChanges", new {}, new {@class = "btn btn-default"})</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Cookie Policies</h2>
+        <p>Cookie Policies allow you to only allow cookies to be accessed via http requests and through SSL. This is another line of defense against XSS</p>
+        <p>@Html.ActionLink("Learn More", "CookiePolicies", "ConfigurationChanges", new {}, new {@class = "btn btn-default"})</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
         <h2>Global Exception Handling</h2>
         <p>It is never a good idea to expose any details about an exception to users.</p>
-        <p>@Html.ActionLink("Learn More", "GlobalExceptionHandling", "HDCDemo", new {}, new { @class = "btn btn-default" })</p>        
+        <p>@Html.ActionLink("Learn More", "GlobalExceptionHandling", "Filter", new {}, new { @class = "btn btn-default" })</p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+        <h2>Action Filters</h2>
+        <p>Action filters allow you to write custom business rules to help protect your website</p>
+        <p>@Html.ActionLink("Learn More", "ActionFilter", "Filter", new { }, new { @class = "btn btn-default" })</p>
+    </div> 
 </div>
