@@ -22,3 +22,7 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.content-security-policy {
+    color: #ff0000;
+}

@@ -2,4 +2,73 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<h2>Image Sources</h2>
+<div class="row">
+    <div class="col-md-6">
+        Local Image
+    </div>
+    <div class="col-md-6">
+        Internet Image
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <img src="../../Content/Images/CodeAperture_Medium.png" height="200"/>
+    </div>
+    <div class="col-md-6">
+        <img src="//c6.staticflickr.com/6/5819/21799395533_20d74c1e08_b.jpg" height="200"/>
+    </div>
+</div>
 
+<h2>JavaScript Sources</h2>
+<div class="row">
+    <div class="col-md-6">
+        Script Button
+    </div>
+    <div class="col-md-6">
+        Inline Button
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <button id="script-button">Click Me</button>
+    </div>
+    <div class="col-md-6">
+        <button onclick="alert('hello from inline!')">Click Me</button>
+    </div>
+</div>
+
+<h2>CSS Sources</h2>
+<div class="row">
+    <div class="col-md-6">
+        CSS File
+    </div>
+    <div class="col-md-6">
+        Inline CSS
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="content-security-policy">Hello With CSS Styles! I should be Red!</div>
+    </div>
+    <div class="col-md-6">
+        <div style="color: #ff0000">Hello With Inline Styles! I should be Red!</div>
+    </div>
+</div>
+
+<h2>Learn More</h2>
+<div class="row">
+    <ul>
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives">Content Security Policy Reference</a>
+        </li>
+        <li>
+            <a href="http://www.codeaperture.io/2016/05/25/prevent-xss-exploits-content-security-policy-header/">Content Security Policy Post</a>        
+        </li>
+    </ul>       
+</div>
+
+@section scripts
+{
+    <script src="../../Scripts/ContentSecurityPolicy.js"></script>
+}
