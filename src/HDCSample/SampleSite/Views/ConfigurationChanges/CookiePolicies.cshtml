@@ -2,4 +2,26 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<h2>Http Only</h2>
+<div class="row">
+    <div class="col-md-6">
+        <button id="cookie-contents">Click Me To View Cookies Contents</button>
+    </div>
+</div>
 
+<h2>SSL Only</h2>
+<div class="row">
+    <div class="col-md-6">
+        <a href="https://localhost:44305/ConfigurationChanges/CookiePolicies">Secure</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <a href="http://localhost:52895/ConfigurationChanges/CookiePolicies">Insecure</a>
+    </div>
+</div>
+
+@section scripts
+{
+    <script src="../../Scripts/CookiePolicies.js"></script>
+}

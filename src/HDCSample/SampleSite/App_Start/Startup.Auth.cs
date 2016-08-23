@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using CodeAperture.HDC2016.SampleSite.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
@@ -12,7 +13,7 @@ namespace CodeAperture.HDC2016.SampleSite
     {
         // For more information on configuring authentication, please visit http://go.microsoft.com/fwlink/?LinkId=301864
         public void ConfigureAuth(IAppBuilder app)
-        {
+        {            
             // Configure the db context, user manager and signin manager to use a single instance per request
             app.CreatePerOwinContext(ApplicationDbContext.Create);
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
@@ -21,6 +22,7 @@ namespace CodeAperture.HDC2016.SampleSite
             // Enable the application to use a cookie to store information for the signed in user
             // and to use a cookie to temporarily store information about a user logging in with a third party login provider
             // Configure the sign in cookie
+            var cookiePolicy = (System.Web.Configuration.HttpCookiesSection)ConfigurationManager.GetSection("system.web/httpCookies");
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
@@ -31,10 +33,12 @@ namespace CodeAperture.HDC2016.SampleSite
                     // This is a security feature which is used when you change a password or add an external login to your account.  
                     OnValidateIdentity = SecurityStampValidator.OnValidateIdentity<ApplicationUserManager, ApplicationUser>(
                         validateInterval: TimeSpan.FromMinutes(30),
-                        regenerateIdentity: (manager, user) => user.GenerateUserIdentityAsync(manager))
-                }
+                        regenerateIdentity: (manager, user) => user.GenerateUserIdentityAsync(manager)),                    
+                },
+                CookieHttpOnly = cookiePolicy.HttpOnlyCookies,
+                CookieSecure = cookiePolicy.RequireSSL ? CookieSecureOption.Always : CookieSecureOption.Never
             });            
-            app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
+            app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);            
 
             // Enables the application to temporarily store user information when they are verifying the second factor in the two-factor authentication process.
             app.UseTwoFactorSignInCookie(DefaultAuthenticationTypes.TwoFactorCookie, TimeSpan.FromMinutes(5));
