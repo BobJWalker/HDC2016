@@ -18,6 +18,7 @@ namespace CodeAperture.HDC2016.SampleSite
 
             //Configure Global Filters
             GlobalConfiguration.Configuration.Filters.Add(new ExceptionFilterAttribute());
+            GlobalConfiguration.Configuration.Filters.Add(new BizLogicFilter());
         }
     }
 }
