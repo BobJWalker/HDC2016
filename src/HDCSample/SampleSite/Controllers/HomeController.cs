@@ -8,7 +8,6 @@ namespace CodeAperture.HDC2016.SampleSite.Controllers
     {
         public ActionResult Index()
         {
-            base.HttpContext.Response.Cookies.Add(new HttpCookie("test", "test"));
             return View();
         }
     }

@@ -1,5 +1,28 @@
 ﻿@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";    
 }
 
+<h1>Global Exception Handling</h1>
+<p>It is never a good idea to expose any kind of exception information to users.</p>
 
+<p>Clicking this link will hit an end point that is setup to throw an error</p>
+<div class="row">
+    <div class="col-md-6">
+        <button id="throw-error">Throw Error</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6" id="error-results">
+        
+    </div>
+</div>
+
+<h2>Experiment</h2>
+<div class="row">
+    <div class="col-md-6">Comment/Uncomment out the line of the code in the global.asax file that adds the exception filter</div>
+</div>
+
+@section scripts
+{
+    <script src="../../Scripts/GlobalExceptionFilter.js"></script>
+}

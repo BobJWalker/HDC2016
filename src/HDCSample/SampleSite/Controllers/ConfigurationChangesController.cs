@@ -11,11 +11,13 @@ namespace CodeAperture.HDC2016.SampleSite.Controllers
         // GET: 
         public ActionResult ContentSecurityPolicy()
         {
+            ViewBag.Title = "Content Security Policy";
             return View();
         }
 
         public ActionResult CookiePolicies()
         {
+            ViewBag.Title = "Cookie Policies";
             return View();
         }
     }

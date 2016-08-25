@@ -10,6 +10,7 @@ namespace CodeAperture.HDC2016.SampleSite.Controllers
     {
         public ActionResult GlobalExceptionHandling()
         {
+            ViewBag.Title = "Global Exception Handling - WebApi";
             return View();
         }
 

@@ -1,6 +1,8 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<h1>Content Security Policy</h1>
+<p>Content security policy allows you to set only acceptable sources for elements as well as prevent inline scripts and styles from running</p>
 
 <h2>Image Sources</h2>
 <div class="row">
@@ -20,7 +22,7 @@
     </div>
 </div>
 
-<h2>JavaScript Sources</h2>
+<h2>Inline JavaScript</h2>
 <div class="row">
     <div class="col-md-6">
         Script Button
@@ -38,7 +40,7 @@
     </div>
 </div>
 
-<h2>CSS Sources</h2>
+<h2>Inline CSS</h2>
 <div class="row">
     <div class="col-md-6">
         CSS File
@@ -54,6 +56,11 @@
     <div class="col-md-6">
         <div style="color: #ff0000">Hello With Inline Styles! I should be Red!</div>
     </div>
+</div>
+
+<h2>Experiment</h2>
+<div class="row">
+    <div class="col-md-6">Comment/Uncomment the content security policy settings in the web.config</div>
 </div>
 
 <h2>Learn More</h2>
