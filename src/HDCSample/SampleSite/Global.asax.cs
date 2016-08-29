@@ -2,7 +2,9 @@
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using CodeAperture.HDC2016.SampleSite.App_Start;
 using CodeAperture.HDC2016.SampleSite.Filters;
+using CodeAperture.HDC2016.SampleSite.Filters.WebApi;
 
 namespace CodeAperture.HDC2016.SampleSite
 {
@@ -11,14 +13,11 @@ namespace CodeAperture.HDC2016.SampleSite
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-            GlobalConfiguration.Configure(WebApiConfig.Register);
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            GlobalConfiguration.Configure(WebApiRouteConfig.Register);
+            MvcFilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-
-            //Configure Global Filters
-            //GlobalConfiguration.Configuration.Filters.Add(new ExceptionFilterAttribute());
-            GlobalConfiguration.Configuration.Filters.Add(new BizLogicFilter());
+            WebApiFilterConfig.Register(GlobalConfiguration.Configuration);
         }
     }
 }

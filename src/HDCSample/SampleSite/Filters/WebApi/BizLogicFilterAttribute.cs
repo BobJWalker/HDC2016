@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
 
-namespace CodeAperture.HDC2016.SampleSite.Filters
+namespace CodeAperture.HDC2016.SampleSite.Filters.WebApi
 {
-    public class BizLogicFilter : ActionFilterAttribute
+    public class BizLogicFilterAttribute : ActionFilterAttribute
     {
         /// <summary>
         /// This method will fire before the controller method is executed

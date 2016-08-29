@@ -16,6 +16,7 @@ namespace CodeAperture.HDC2016.SampleSite.Controllers
 
         public ActionResult ActionFilter()
         {
+            ViewBag.Title = "Action Filter - WebApi";
             return View();
         }
     }

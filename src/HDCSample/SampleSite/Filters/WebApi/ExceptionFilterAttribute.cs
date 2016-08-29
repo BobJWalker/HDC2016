@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Web.Http.Filters;
 using NLog;
 
-namespace CodeAperture.HDC2016.SampleSite.Filters
+namespace CodeAperture.HDC2016.SampleSite.Filters.WebApi
 {
     public class ExceptionFilterAttribute : System.Web.Http.Filters.ExceptionFilterAttribute
     {

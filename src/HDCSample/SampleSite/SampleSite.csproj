@@ -177,24 +177,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\MvcFilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="App_Start\WebApiRouteConfig.cs" />
+    <Compile Include="App_Start\WebApiFilterConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ConfigurationChangesController.cs" />
     <Compile Include="Controllers\ExceptionFilterController.cs" />
     <Compile Include="Controllers\FilterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Filters\BizLogicFilter.cs" />
-    <Compile Include="Filters\ExceptionFilterAttribute.cs" />
+    <Compile Include="DataAccess\Context\SecurityDbContext.cs" />
+    <Compile Include="DataAccess\Repository\LogRepository.cs" />
+    <Compile Include="Filters\Mvc\LoggingFilterAttribute.cs" />
+    <Compile Include="Filters\WebApi\BizLogicFilterAttribute.cs" />
+    <Compile Include="Filters\WebApi\ExceptionFilterAttribute.cs" />
+    <Compile Include="Filters\WebApi\LoggingFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\LogModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -286,7 +292,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="DataAccess\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
