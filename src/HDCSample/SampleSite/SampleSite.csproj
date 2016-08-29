@@ -198,10 +198,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\LogModel.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Exception\SampleSiteException.cs" />
+    <Compile Include="Models\ViewModel\AccountViewModels.cs" />
+    <Compile Include="Models\Model\IdentityModels.cs" />
+    <Compile Include="Models\Model\LogModel.cs" />
+    <Compile Include="Models\ViewModel\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

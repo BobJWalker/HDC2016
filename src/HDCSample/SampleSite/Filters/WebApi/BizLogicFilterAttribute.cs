@@ -1,7 +1,9 @@
-﻿using System.Threading;
+﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
+using CodeAperture.HDC2016.SampleSite.Models.Exception;
 
 namespace CodeAperture.HDC2016.SampleSite.Filters.WebApi
 {
@@ -12,15 +14,17 @@ namespace CodeAperture.HDC2016.SampleSite.Filters.WebApi
         /// </summary>        
         public override Task OnActionExecutingAsync(HttpActionContext actionContext, CancellationToken cancellationToken)
         {
-            return base.OnActionExecutingAsync(actionContext, cancellationToken);
-        }
+            //Do not use this in production code, it is not truly random
+            var random = new Random();
 
-        /// <summary>
-        /// This method will fire after the controller method is completed
-        /// </summary>        
-        public override Task OnActionExecutedAsync(HttpActionExecutedContext actionExecutedContext, CancellationToken cancellationToken)
-        {
-            return base.OnActionExecutedAsync(actionExecutedContext, cancellationToken);
-        }        
+            var result = random.Next(1, 10);
+
+            if (result < 3)
+            {
+                throw new SampleSiteException("Random Fun!");
+            }
+
+            return base.OnActionExecutingAsync(actionContext, cancellationToken);
+        }      
     }
 }
