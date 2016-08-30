@@ -185,11 +185,12 @@
     <Compile Include="App_Start\WebApiFilterConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ConfigurationChangesController.cs" />
+    <Compile Include="Controllers\DemoController.cs" />
     <Compile Include="Controllers\ExceptionFilterController.cs" />
     <Compile Include="Controllers\FilterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="DataAccess\Context\SecurityDbContext.cs" />
+    <Compile Include="DataAccess\Context\DemoDbContext.cs" />
     <Compile Include="DataAccess\Repository\LogRepository.cs" />
     <Compile Include="Filters\Mvc\LoggingFilterAttribute.cs" />
     <Compile Include="Filters\WebApi\BizLogicFilterAttribute.cs" />
@@ -199,9 +200,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Exception\SampleSiteException.cs" />
+    <Compile Include="Models\Model\BaseModel.cs" />
+    <Compile Include="Models\Model\DemoModel.cs" />
     <Compile Include="Models\ViewModel\AccountViewModels.cs" />
     <Compile Include="Models\Model\IdentityModels.cs" />
-    <Compile Include="Models\Model\LogModel.cs" />
     <Compile Include="Models\ViewModel\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
