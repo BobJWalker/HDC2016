@@ -16,10 +16,10 @@ namespace CodeAperture.HDC2016.SampleSite.App_Start
             //configuration.Filters.Add(new ExceptionFilterAttribute());
 
             //Custom Business Logic Filter
-            configuration.Filters.Add(new BizLogicFilterAttribute());
+            //configuration.Filters.Add(new BizLogicFilterAttribute());
 
             //Logging Filter
-            configuration.Filters.Add(new LoggingFilterAttribute());
+            //configuration.Filters.Add(new LoggingFilterAttribute());
         }
     }
 }
