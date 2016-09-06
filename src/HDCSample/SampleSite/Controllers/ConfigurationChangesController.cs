@@ -20,5 +20,11 @@ namespace CodeAperture.HDC2016.SampleSite.Controllers
             ViewBag.Title = "Cookie Policies";
             return View();
         }
+
+        public ActionResult AntiXSSEncoder()
+        {
+            ViewBag.Title = "Anti XSS Encoder";
+            return View();
+        }
     }
 }

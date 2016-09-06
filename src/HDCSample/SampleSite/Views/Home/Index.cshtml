@@ -15,6 +15,11 @@
         <p>@Html.ActionLink("Learn More", "ContentSecurityPolicy", "ConfigurationChanges", new {}, new {@class = "btn btn-default"})</p>
     </div>
     <div class="col-md-4">
+        <h2>Anti XSS Encoder</h2>
+        <p>The Anti XSS Encoder prevents XSS from reaching the user.  This is another line of defense against XSS</p>
+        <p>@Html.ActionLink("Learn More", "AntiXSSEncoder", "ConfigurationChanges", new { }, new { @class = "btn btn-default" })</p>
+    </div>
+    <div class="col-md-4">
         <h2>Cookie Policies</h2>
         <p>Cookie Policies allow you to only allow cookies to be accessed via http requests and through SSL. This is another line of defense against XSS</p>
         <p>@Html.ActionLink("Learn More", "CookiePolicies", "ConfigurationChanges", new {}, new {@class = "btn btn-default"})</p>
