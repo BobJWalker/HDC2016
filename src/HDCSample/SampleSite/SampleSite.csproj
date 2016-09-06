@@ -201,7 +201,7 @@
     <Compile Include="DataAccess\Context\DemoDbContext.cs" />
     <Compile Include="DataAccess\Repository\LogRepository.cs" />
     <Compile Include="Filters\Mvc\LoggingFilterAttribute.cs" />
-    <Compile Include="Filters\WebApi\BizLogicFilterAttribute.cs" />
+    <Compile Include="Filters\WebApi\AntiXssFilterAttribute.cs" />
     <Compile Include="Filters\WebApi\ExceptionFilterAttribute.cs" />
     <Compile Include="Filters\WebApi\LoggingFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">

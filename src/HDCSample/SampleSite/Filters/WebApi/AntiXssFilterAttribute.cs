@@ -27,7 +27,6 @@ namespace CodeAperture.HDC2016.SampleSite.Filters.WebApi
                 {
                     data = AntiXssEncoder.HtmlEncode(data.ToString(), false);
                 }
-
             }
 
             return base.OnActionExecutingAsync(actionContext, cancellationToken);
