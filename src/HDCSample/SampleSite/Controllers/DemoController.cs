@@ -2,6 +2,7 @@
 using System.Data.Entity;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Security.AntiXss;
 using CodeAperture.HDC2016.SampleSite.DataAccess.Context;
 using CodeAperture.HDC2016.SampleSite.Models.Model;
 
@@ -31,6 +32,8 @@ namespace CodeAperture.HDC2016.SampleSite.Controllers
         [HttpPost]
         public async Task<DemoModel> PostModel([FromBody] DemoModel model)
         {
+            //model.Data = AntiXssEncoder.HtmlEncode(model.Data, true);
+
             _context.DemoModels.Add(model);
             await _context.SaveChangesAsync();
             
