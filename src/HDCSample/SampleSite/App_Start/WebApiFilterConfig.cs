@@ -16,7 +16,7 @@ namespace CodeAperture.HDC2016.SampleSite.App_Start
             //configuration.Filters.Add(new ExceptionFilterAttribute());
 
             //Custom Business Logic Filter
-            //configuration.Filters.Add(new AntiXssFilterAttribute());
+            configuration.Filters.Add(new AntiXssFilterAttribute());
 
             //Logging Filter
             //configuration.Filters.Add(new LoggingFilterAttribute());

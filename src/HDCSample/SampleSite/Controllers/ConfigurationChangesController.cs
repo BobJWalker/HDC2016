@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using CodeAperture.HDC2016.SampleSite.DataAccess.Context;
+using CodeAperture.HDC2016.SampleSite.Models.Model;
 
 namespace CodeAperture.HDC2016.SampleSite.Controllers
 {

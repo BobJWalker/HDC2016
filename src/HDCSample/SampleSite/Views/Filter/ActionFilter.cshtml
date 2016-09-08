@@ -2,4 +2,44 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<h1>Action Filter</h1>
+<p>Action Filters enable you to write your own custom business logic to secure your website</p>
+
+<p>Clicking this link will POST a link will send a request to a REST Service</p>
+<div class="row">
+    <div class="col-md-6">
+        <button id="get-demo">Post</button>
+    </div>
+</div>
+
+<p>Results will appear below</p>
+<div class="row">
+
+    <div class="col-md-6" id="demo-results">
+
+    </div>
+</div>
+
+<h3>Experiment</h3>
+<div class="row">
+    <div class="col-md-6">Comment/Uncomment out the the line of code in the WebApiFilterConfig that enables the action filter</div>
+</div>
+
+<h2>Learn More</h2>
+<div class="row">
+    <ul>
+        <li>
+            <a href="https://msdn.microsoft.com/en-us/library/system.web.http.filters.actionfilterattribute(v=vs.118).aspx">MSDN Article on Action Filters</a>
+        </li>
+        <li>
+            <a href="http://www.codeaperture.io/2016/06/08/use-actionfilters-to-lock-down-asp-net-webapi/">Action Filter Blog Post</a>
+        </li>
+    </ul>
+</div>
+
+@section scripts
+{
+    <script src="../../Scripts/AntiXSSEncoder.js"></script>
+}
+
 

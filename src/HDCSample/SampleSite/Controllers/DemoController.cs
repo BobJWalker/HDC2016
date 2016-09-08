@@ -32,8 +32,6 @@ namespace CodeAperture.HDC2016.SampleSite.Controllers
         [HttpPost]
         public async Task<DemoModel> PostModel([FromBody] DemoModel model)
         {
-            //model.Data = AntiXssEncoder.HtmlEncode(model.Data, true);
-
             _context.DemoModels.Add(model);
             await _context.SaveChangesAsync();
             

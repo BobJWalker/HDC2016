@@ -5,21 +5,36 @@
 <h1>Anti XSS Encoder</h1>
 <p>The Anti XSS Encoder will automatically encode any characters not found in a whitelist</p>
 
-<p>Clicking this link will return data that was not properly encoded when it was entered</p>
+<p>Clicking this link will POST a link will send a request to a REST Service</p>
 <div class="row">
     <div class="col-md-6">
         <button id="get-demo">Post</button>
     </div>
 </div>
+
+<p>Results will appear below</p>
 <div class="row">
+    
     <div class="col-md-6" id="demo-results">
 
     </div>
 </div>
 
-<h2>Experiment</h2>
+<h3>Experiment</h3>
 <div class="row">
-    <div class="col-md-6">Comment/Uncomment out the section in the web.config that enables / disables the encoder</div>
+    <div class="col-md-6">Comment/Uncomment out the the line of code in the DemoDbContext that runs any results through the AntiXSS encoder</div>
+</div>
+
+<h2>Learn More</h2>
+<div class="row">
+    <ul>
+        <li>
+            <a href="https://www.owasp.org/index.php/.NET_AntiXSS_Library">OWasp Article on AntiXSS Library</a>
+        </li>
+        <li>
+            <a href="https://msdn.microsoft.com/en-us/library/hh244070(v=vs.110).aspx">MSDN Article on HtmlEncode</a>
+        </li>
+    </ul>
 </div>
 
 @section scripts
